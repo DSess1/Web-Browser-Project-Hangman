@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: blue;
+}
+
+.container{
+    background-color: brown;
+    border:solid burlywood ;
+    width: 80vw;
+    max-width: 30em;
+    font-size:  15px;
+    padding:2em;
+    position:absolute; 
+    transform: translate(-50% -50%);
+    top:50%;
+    left:50%;
+
+}
+
+#options-container{
+    text-align: center;
+}
+
+#options-container div{
+    width:100%;
+    display: flex;
+    margin:1em 0 2em 0;
+}
+  
+#options-container-button{
+    background-color: yellowgreen;
+    border:2px solid green;
+    padding:1em 1em;
+    color: aqua;
+    cursor: pointer;
+    text-transform: capitalize;
+
+}
+  
+
