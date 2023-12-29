@@ -3,6 +3,7 @@
     margin:0;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+    margin:10px ;
 }
 body{
     background-color: rgb(162, 200, 200);
@@ -18,23 +19,43 @@ body{
     padding:2em;
     display: flex;
     justify-content: center;
-    /*position:absolute; 
+    margin: 10px;
+    
+   /** position:absolute; 
     transform: translate(-50% -50%);
     top:50%;
     left:50%;*/
 
 }
 
-.letter-input-sec{
+.word-div{
+    width: 1300px;
+    height:400px;
     display: flex;
     justify-content: center;
     font-size: 2em;
-    margin: 0.5em 0 1em  0;
+    margin: 10px;
+    border:solid orangered
+
 }
 
-.lives{
+.hint-div{
+border: solid black;
+margin: 10px;
+}
 
+.hidden-notification{
+    border: solid green;
+    margin:20px;
+    width:550px;
+    height:150px; ;
     
+}
+
+.notification-span{
+    border: solid blue;
+    width:00px;
+    height: 00px;;
 
 }
 
@@ -45,6 +66,7 @@ body{
     padding: 0.5em 1em;
     cursor: pointer;
     color: rgb(69, 215, 139);
+    
 
 }
 
