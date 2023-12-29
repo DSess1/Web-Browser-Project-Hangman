@@ -8,16 +8,24 @@
 </head>
 <body>
   <div class="container"> 
-    <h1>Hangman</h1>
-    <div class = "text-center"><h1>HangMan</h1></div>
-    <div class = "foat-right">Wrong Letter <span id = 'wrongChoice'>0 </span> of <span id = 'mistake'></span></div>
-    <div class = "player-input-sec"></div><p>See if you can guess the right Athlete! Please enter a letter</p>
+    <h1>HANGMAN</h1>
+    
+    <div class = "letter-div"></div>
+     <h2>Try to Guess the Athlete --- Choose A Letter</h2>
   
-    <button id = "new-game-button"> New Game</button>
-    </div> 
-
+    <div class = "letter-input-sec"></div>
+       <h3>Number of lives left: <span class= "lives">6</span></h3>
+     <div class="hint-div">
+     <button class="ath-hint-btn">Hint</button>
+     </div>
   </div>
-
-
- <script src = "script.js"></script>
+     <div class="hidden-notification">
+      <h2>YOU LOSE! GAME OVER!!</h2>
+      <h2 class="win-text"> YOU WIN!</h2>
+      <h3>Correct Athlete: <span class="notification-span"></span></h3>
+      <button id = "new-game-button"> New Game</button>
+     </div>
+   
+   <script src = "script.js"></script>
+</body>
 </html>

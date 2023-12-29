@@ -1,9 +1,10 @@
 Web-Browser_Project-Hangman
 Rules to the game:
-Player has a chance to get the corrcect word based on the category that they choose.
-Player has a choice of five categeories to choose from along with a hint.
-Win and lose condition :if player guesses the right word he/she wins; if not he/she loses.
-Player has a certain amount of times to guess the right letter; everytime player guesses wrong, a part of the man's body is drawn. Player must guess the right word before complete body of man is drawn
-Player loses if complete body is drawn of man.
-Player can choose to play again(a new game) if he/she wins or loses
+Player has a chance to get the corrcect name of a sports athlete by inpuiting a single letter at a time.
+Player will be given a hint.
+Player has a certain amount of times to guess the right letter; everytime player guesses wrong, player loses numbe of chances to guess the letter until number of chances are gone.
+When number of chances are gone, the player loses.
+If player gusses the athlete, player wins.
+Player can choose to play again(a new game) if he/she wins or loses.
+
 
