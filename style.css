@@ -7,12 +7,20 @@
 }
 body{
     background-color: rgb(162, 200, 200);
-} */
+    padding: 0;
+    margin:0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+   /* margin:10px ;*/
+    text-align: center;
+
+} 
 
 .container{
+    margin-top: 20px;
     background-color: silver;
     border:solid burlywood ;
-    width: 100vw;
+    width: 90vw;
     height: 80vh;
     max-width: 200em;
     font-size:  15px;
@@ -20,31 +28,38 @@ body{
     display: flex;
     justify-content: center;
     margin: 10px;
-    
-   /** position:absolute; 
-    transform: translate(-50% -50%);
-    top:50%;
-    left:50%;*/
 
 }
 
-.word-div{
+.word-display{
+
     width: 1300px;
     height:400px;
     display: flex;
     justify-content: center;
     font-size: 2em;
-    margin: 10px;
-    border:solid orangered
+    margin-bottom:  10px;
+    padding-top: 200px;
+    border:solid rgb(145, 53, 20)
 
 }
 
-.hint-div{
+
+.letters{
+   
+   margin: 20px;
+}
+
+/*#hint-div{
 border: solid black;
 margin: 10px;
+
+}
+#ath-hint-button{
+    font: size 1.3em; 
 }
 
-.hidden-notification{
+#hidden-notification{
     border: solid green;
     margin:20px;
     width:550px;
@@ -52,18 +67,19 @@ margin: 10px;
     
 }
 
-.notification-span{
+#notification-span{
     border: solid blue;
     width:00px;
-    height: 00px;;
+    height: 00px;
 
-}
+}*/
 
-.new-game-button{
-    font-size: 1.3em;
+button{
+    font-size: 1.5em;
     background-color: bisque;
-    border: black;
+    border:solid black;
     padding: 0.5em 1em;
+    padding:10px  20px; ;
     cursor: pointer;
     color: rgb(69, 215, 139);
     

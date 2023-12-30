@@ -7,24 +7,28 @@
     <link rel = "stylesheet" href = "style.css"> 
 </head>
 <body>
+  <h1>HANGMAN</h1>
   <div class="container"> 
     <h1>HANGMAN</h1>
-    
-    <div class = "letter-div"></div>
-     <h2>Try to Guess the Athlete --- Choose A Letter</h2>
-  
-    <div class = "word-div"></div>
-       <h3>Number of lives left: <span class= "lives">6</span></h3>
-     <div class="hint-div">
-     <button class="ath-hint-btn">Hint</button>
-     </div>
-  </div>
-     <div class="hidden-notification">
+
+    <div class = "word-display"  id = "wordDisplay"></div>
+    <div class = "guesses-left">Number of lives left:<span id= "guessesLeft"></span></div>
+    <div class = "letters">
+     <h2>Try to Guess the Athlete --- Choose A Letter:</h2>
+    <div id = "letterButtons"></div>
+   </div>
+
+    <!---- <div id="hint-div">
+     <button id="ath-hint-btn">Hint</button>
+     </div>-->
+    </div>
+   <button onclick ="resetGame()">New Game</button>
+     <!--<div id="hidden-notification">
       <h2>YOU LOSE! GAME OVER!!</h2>
-      <h2 class="win-text"> YOU WIN!</h2>
+      <h2 id="win-text"> YOU WIN!</h2>
       <h3>Correct Athlete: <span class="notification-span"></span></h3>
-      <button id = "new-game-button"> New Game</button>
-     </div>
+      <button id = "new-game-button"> New Game</button>-->
+  </div>
    
    <script src = "script.js"></script>
 </body>
