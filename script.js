@@ -71,10 +71,10 @@ function checkLetter(letter){
    
     }
     displayWord();
-    console.log(displayWord);
     displayGuessesLeft();
     checkGameStatus();
 }
+
 
  function displayGuessesLeft(){
     guessesLeft.textContent = remainingGuesses;
