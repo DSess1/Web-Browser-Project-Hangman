@@ -71,6 +71,7 @@ function checkLetter(letter){
    
     }
     displayWord();
+    console.log(displayWord);
     displayGuessesLeft();
     checkGameStatus();
 }
