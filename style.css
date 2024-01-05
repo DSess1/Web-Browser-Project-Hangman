@@ -9,17 +9,15 @@
 }
 
 /* stylinig of the body */
+
 body{
     background-color: rgb(117, 132, 117);
-    padding:0;
-    margin: 0;
     margin-right:300px;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
     text-align: center;
 
 } 
 /* styling of game container */
+
 .container{
     margin-top: 20px;
      
@@ -34,9 +32,9 @@ body{
     justify-content: center;
     margin-right: 20px;
     margin-left: 70px;
-    
 
 }
+
 /* styling of word display class */
 .word-display{
 
@@ -45,9 +43,8 @@ body{
     display: flex;
     justify-content: center;
     font-size: 2em;
-    margin-bottom:  10px;
     padding-top: 150px;
-    border:solid rgb(145, 53, 20)
+    border:solid rgb(145, 53, 20);
 
 }
 
@@ -57,9 +54,8 @@ body{
    margin: 20px;
 }
 
-
-    
-/*styling of New Game button */
+   
+/*styling of New Game button and letter buttons */
 
 button{
     font-size: 1.5em;
