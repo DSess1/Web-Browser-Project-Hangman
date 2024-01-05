@@ -1,11 +1,14 @@
+
+
 *{
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
-    box-sizing: border-box;
+    box-sizing: border-box; /* boxed with border around it */
     margin:10px ;
 }
 
+/* stylinig of the body */
 body{
     background-color: rgb(117, 132, 117);
     padding:0;
@@ -16,7 +19,7 @@ body{
     text-align: center;
 
 } 
-
+/* styling of game container */
 .container{
     margin-top: 20px;
      
@@ -34,7 +37,7 @@ body{
     
 
 }
-
+/* styling of word display class */
 .word-display{
 
     width: 1300px;
@@ -48,7 +51,7 @@ body{
 
 }
 
-
+/* styling of letters class */
 .letters{
 
    margin: 20px;
@@ -56,7 +59,7 @@ body{
 
 
     
-
+/*styling of New Game button */
 
 button{
     font-size: 1.5em;

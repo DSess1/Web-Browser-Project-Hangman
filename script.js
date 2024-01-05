@@ -30,7 +30,7 @@ const wordsWithHints = [{word:'KOBE',hint:'   Former Lakers great shooting guard
     if (guessedLetters.includes(letter)) {//checks whether guessed letter is included in selected word
       wordHTML += `<span>${letter}</span>`;//places the value of letter directly into the string
     } else {
-       wordHTML += '<span>_</span>';// displays the underlined values of each letter
+      wordHTML += '<span>_</span>';// displays the underlined value instead of letter
     }
    }
    wordDisplay.innerHTML = wordHTML;//displays word from the element property
@@ -41,7 +41,7 @@ const wordsWithHints = [{word:'KOBE',hint:'   Former Lakers great shooting guard
 function displayGuessedLetters(){
   letterButtons.innerHTML = '';
    for (let i = 65; i <= 90; i++){// capital letters from A to Z
-    let letter = String.fromCharCode(i);//returns the letter in the alphabet
+    let letter = String.fromCharCode(i);//returns the curent letter in the alphabet
     let button =  document.createElement('button');  //creates a html button in js
     button.textContent = letter;
     button.onclick = function() {//event hamdler button for function  when clicked
@@ -84,10 +84,10 @@ function checkGameStatus() {
     }
 
 }
-// function end game 
+// function for end of game 
 function endGame(message) {
    alert(message);
-  // resetGame();
+  
 }
 
 //reset game function along with hint
@@ -101,7 +101,7 @@ guessedLetters = [];
 displayWord();
 displayGuessesLeft();
 displayGuessedLetters();
-alert('Hint:' + wordHint);// display hint  when game is reset
+alert('Hint:' + wordHint);// display hint 
 
 }
 resetGame();
