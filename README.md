@@ -1,4 +1,5 @@
-Web-Browser_Project-Hangman
+Web-Browser-Project-Hangman (Pro-Sports-Hangman)
+
 Object of the Game: to guess the right sports' athlete(either MLB(Major Baseball League), NFL( National Football League), or NBA(Natonal Basketball League) given a hint).
 Rules to the game:
 Player has a chance to get the corrcect name of a sports athlete by inpuiting a single letter at a time.
@@ -7,5 +8,16 @@ Player has a certain amount of times(6) to guess the right letter; everytime pla
 When number of chances are gone, the player loses.
 If player gusses the athlete, player wins.
 Player can choose to play again(a new game) if he/she wins or loses.
+
+
+Citing Code Snippets:
+**/Title: Building Hangman game using javascript *Author:(Codepiep)* Date(2021) Availability: (https://youtu.be/UsSBmCmiKmI)* **/
+
+
+**/Title: Hangman Game With Javascript *Author: Coding Artist* 
+Date(2022) Availability: (https://youtu.be/T6uht1A0114)* **
+
+**/ Title: Hangman Game with HTML CSS and JavaScript|Beginning Tutorial *Author: (Devresion)* Availability: (https://youtu.be/dRzhwwXy-Sk)* **
+
 
 

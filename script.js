@@ -1,72 +1,73 @@
 
 
 
- //Athletes' Names to be guessed and hints in an array
+  //array of Athletes' names  and hints 
 
-const wordsWithHints = [
-  {word:'KOBE',hint:'   Former Lakers great shooting guard of the NBA.'},
-  {word:'LEBRON',hint:'  The NBA all time leading scorer.'},
-  {word:'PRESCOTT',hint:'  NFL quarterback of the Cowboys.'},
-  {word:'SHAQ', hint: '   Former NBA dominant center of the Lakers.'},
-  {word:'OHTANI',hint: '   MLB plyer, just signed $700 million contract.'},
-  {word:'BRADY', hint: '  Ex Patriots QB of NFL, has the most Superbowl rings.. '},
-  {word:'JUDD', hint:  '  Current NY Yankees homerun hitter'},
-  {word:'MAHOMES', hint: '  Currnet NFL QB of KC Chiefs'}];
+const namesWithHints = [
+  {name:'KOBE',hint:'   Former Lakers great shooting guard of the NBA.'},
+  {name:'LEBRON',hint:'  The NBA all time leading scorer.'},
+  {name:'PRESCOTT',hint:'  NFL quarterback of the Cowboys.'},
+  {name:'SHAQ', hint: '   Former NBA dominant center of the Lakers.'},
+  {name:'OHTANI',hint: '   MLB plyer, just signed $700 million contract.'},
+  {name:'BRADY', hint: '  Ex Patriots QB of NFL, has the most Superbowl rings.. '},
+  {name:'JUDD', hint:  '  Current NY Yankees homerun hitter'},
+  {name:'MAHOMES', hint: '  Currnet NFL QB of KC Chiefs'},
+  {name:'LAMB' , hint: '  Currnet Wide Receiver of the Cowboys'},
+  {name:'Chamberlin', hint: 'Once scored 100 points in an NBA game'}];
                  
  
- let selectedWordInfo = wordsWithHints[Math.floor(Math.random() * wordsWithHints.length)];//Math.floor method returns greatest interger 
- //less than or equal to argument....Math.random returns random number in wordHints array
- let {word: selectedWord, hint: wordHint } = selectedWordInfo;
+ let selectedNameInfo = namesWithHints[Math.floor(Math.random() * namesWithHints.length)];// returns random number in nameHints array
+ let {name: selectedName, hint: nameHint } = selectedNameInfo;
  let remainingGuesses = 6;
  let guessedLetters = [];
- let wordDisplay = document.getElementById('wordDisplay');
+ let nameDisplay = document.getElementById('nameDisplay');
  let guessesLeft =document.getElementById('guessesLeft');
  let letterButtons = document.getElementById('letterButtons');
 
-//function to display word
+//function  displays letters of the Athletes'name, or an Underscore
 
-  const displayWord = () => {
-  let wordHTML ='';
-  for (let letter of selectedWord) {
-    if (guessedLetters.includes(letter)) {//checks whether guessed letter is included in selected word
-      wordHTML += `<span>${letter}</span>`;//places the value of letter directly into the string
+  const displayName = () => {
+  let nameHTML ='';
+  for (let letter of selectedName) {
+    if (guessedLetters.includes(letter)) {//checks whether guessed letter is included in selected Name
+      nameHTML += `<span>${letter}</span>`;//places the letter directly into the string in place of the underscore
     } else {
-      wordHTML += '<span>_</span>';// displays the underlined value instead of letter
+      nameHTML += '<span>_</span>';// displays the underscore
     }
    }
       
-    wordDisplay.innerHTML = wordHTML;//displays word from the element property
+    nameDisplay.innerHTML = nameHTML;// old html content in nameDisplay replaced by content in nameHTML  variable
 }
 
-// function to display guessed letter
+// function to display all Capital letters fro A to Z
 
 const displayGuessedLetters = ()  => {
-  letterButtons.innerHTML = '';
-   for (let i = 65; i <= 90; i++){                   // capital letters from A to Z
-    let letter = String.fromCharCode(i);             //returns the curent letter in the alphabet
+   letterButtons.innerHTML = '';
+   for (let i = 65; i <= 90; i++){                   // capital letters from A to Z using ASCII characters
+    let letter = String.fromCharCode(i);             // turns ASCII character into letter 
     let button =  document.createElement('button');  //creates  button in js
     button.textContent = letter;
     button.onclick = () => {                         //event hamdler button for function  when clicked
     checkLetter(letter);
-    button.disabled = true;
+    button.disabled = true;                           //keeps you from using the same letter more than one
    
   };
-letterButtons.appendChild(button);                    //button becomes a new child of letterButtons (part of alphabets  displayed)
+letterButtons.appendChild(button);                    //button becomes a new child of letterButtons content to be displayed
 console.log(button);
  }
 
 }
 
-// function takes in guessed letter as an argument. Checks to see if the slected word being
+// function takes in a guessed letter as an argument. Checks to see if the slected word being
 // guessed contains a correct letter.
 
 const checkLetter = (letter)  => {
-  if(selectedWord.includes(letter)) {
-   guessedLetters.push(letter);// if letter is correct it is pushed in guessed letter array
+  if(selectedName.includes(letter)) {
+   guessedLetters.push(letter);// if letter is correct it is pushed in guessedLetters array 
 } else {
      remainingGuesses--;  // if guessed letter incorrect it decrements(--) the remainingGuesses counter
     }
-    displayWord();
+    displayName();
     displayGuessesLeft();
     checkGameStatus();
 }
@@ -74,7 +75,7 @@ const checkLetter = (letter)  => {
 // function displays the ramaining guesses that you have left
  const displayGuessesLeft = () => {
   guessesLeft.textContent = remainingGuesses;
-  console.log(remainingGuesses);
+  //console.log(remainingGuesses);
 }
 
 
@@ -82,33 +83,36 @@ const checkLetter = (letter)  => {
 
 const checkGameStatus = () => {
      if (remainingGuesses === 0) {                        // checks for remaining guesses.. if remaining guesses = 0, executes endgame function resulting in an unsucessful game.
-        endGame('Game Over! You Lose! The word was: ' + selectedWord);
-    } else if(!wordDisplay.textContent.includes('_')) {    //checks to see if underscore is included, if underscore is not included it executes the endgame function for a sucessful game
-       endGame('Congrats! You guessed the right athlete: ' + selectedWord);
+        endGame('Game Over! You Lose! The  correct Name was: ' + selectedName);
+    } else if(!nameDisplay.textContent.includes('_')) {    //checks to see if underscore is included, if underscore is not included it executes the endgame function for a sucessful game
+       endGame('Congrats! You guessed the right athlete: ' + selectedName);
     }
 
 }
 // function for end of game 
 const endGame = (message) => {
-   alert(message);
+   alert(message);  // displays alert message in browser with 'OK' button.. pauses game until clicked
   
 }
 
 //reset game function along with hint
 
 const resetGame = () => {
-selectedWordInfo = wordsWithHints[Math.floor(Math.random() *wordsWithHints.length)];
-selectedWord = selectedWordInfo.word;
-wordHint = selectedWordInfo.hint;
+selectedNameInfo = namesWithHints[Math.floor(Math.random() *namesWithHints.length)];
+selectedName = selectedNameInfo.name;
+nameHint = selectedNameInfo.hint;
 remainingGuesses = 6;
 guessedLetters = [];
-displayWord();
+displayName();
 displayGuessesLeft();
 displayGuessedLetters();
-alert('Hint:' + wordHint);// display hint 
+alert('Hint:' + nameHint);// display hint ..pauses game
+
 
 }
 resetGame();
+
+
 
 
 
