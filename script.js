@@ -16,9 +16,9 @@ const namesWithHints = [
   {name:'JORDAN', hint:'   Often called the Geatest NBA player of All Time'}];
                  
  
- let selectedNameInfo = namesWithHints[Math.floor(Math.random() * namesWithHints.length)];// returns random number in nameWithHints array
+ let selectedNameInfo = namesWithHints[Math.floor(Math.random() * namesWithHints.length)];// returns random name in nameWithHints array
  let {name: selectedName, hint: nameHint } = selectedNameInfo;                              
- let remainingGuesses = 6;
+ let remainingGuesses = 6;       //number of lives
  let guessedLetters = [];
  let nameDisplay = document.getElementById('nameDisplay');
  let guessesLeft =document.getElementById('guessesLeft');
@@ -30,23 +30,22 @@ const namesWithHints = [
   let nameHTML ='';
   for (let letter of selectedName) {
     if (guessedLetters.includes(letter)) {//checks whether guessed letter is included in selected Name
-      nameHTML += `<span>${letter}</span>`;//places the letter directly into the string in place of the underscore  (code from youTube Codepiep)
+      nameHTML += `<span>${letter}</span>`;//places the letter directly into the string in place of the underscore  (code from youTube Codepiep, CodingArtist)
     } else {
       nameHTML += '<span>_</span>';// displays the underscore
     }
-   }
-      
-    nameDisplay.innerHTML = nameHTML;// old html content in nameDisplay replaced by content in nameHTML  variable
+   }    
+    nameDisplay.innerHTML = nameHTML;// old html content in nameDisplay replaced by new content in nameHTML  
 }
 
 // function to creates Keybord buttons(Capital letters fro A to Z)   
 
 const displayGuessedLetters = ()  => {
    letterButtons.innerHTML = '';
-   for (let i = 65; i <= 90; i++){                   // capital letters from A to Z using ASCII characters(code from W3Schools)
-    let letter = String.fromCharCode(i);             // turns ASCII character into letter(code from W3Schools) 
+   for (let i = 65; i <= 90; i++){                   // capital letters from A to Z using ASCII characters(code from CodingNepal)
+    let letter = String.fromCharCode(i);             // turns ASCII character into letter(Ccode from CodingNepal, Devresion) 
     let button =  document.createElement('button');  //creates  button in js
-    button.textContent = letter;                     
+    button.textContent = letter;                     // Contenet  displayed in button is updated with variable stored in letter (code from CodingArtist))
     button.onclick = () => {                         // onclick event handler button for function  checkLetter
     checkLetter(letter);
     button.disabled = true;                           //keeps you from using the same letter more than one
@@ -65,7 +64,7 @@ const checkLetter = (letter)  => {
   if(selectedName.includes(letter)) {
    guessedLetters.push(letter);// if letter is correct it is pushed in guessedLetters array 
 } else {
-     remainingGuesses--;  // if guessed letter incorrect it decrements(--) the remainingGuesses counter
+     remainingGuesses--;  // if guessed letter incorrect it decrements(--) the remainingGuesses(remaining lives) counter
     }
     displayName();
     displayGuessesLeft();
@@ -73,9 +72,10 @@ const checkLetter = (letter)  => {
   
 }
 
-// function displays the ramaining guesses that you have left
+// function displays the ramaining guesses(lives) that you have left
+
  const displayGuessesLeft = () => {
-  guessesLeft.textContent = remainingGuesses;//updates guessesLeft  into remainingGuesses
+  guessesLeft.textContent = remainingGuesses;//updates guessesLeft  into remainingGuesses(lives left)
   //console.log(remainingGuesses);
 }
 
@@ -83,23 +83,24 @@ const checkLetter = (letter)  => {
 // function to check and display Win or Lose
 
 const checkGameStatus = () => {
-     if (remainingGuesses === 0) {                       // checks for remaining guesses.. if remaining guesses = 0, executes endgame function resulting in an unsucessful game.
+     if (remainingGuesses === 0) {                       // checks for remaining guesses.. if remaining guesses = 0(# of lives), executes endgame function resulting in an unsucessful game.
         endGame('Game Over! You Lose! The  correct Name was: ' + selectedName);
-    } else if(!nameDisplay.textContent.includes('_')) {    //checks to see if underscore is included, if underscore is not included it executes the endgame function for a sucessful game
+    } else if(!nameDisplay.textContent.includes('_')) {    //checks to see if underscore is included, if underscore is not included it executes the endgame function for a sucessful gameCode from devresion)
        endGame('Congrats! You guessed the right athlete: ' + selectedName);
     }
 
 }
 // function for end of game 
+
 const endGame = (message) => {
    alert(message);  // displays alert message in browser with 'OK' button.. pauses game until clicked
   
 }
 
-//reset game function along with hint
+//reset game function 
 
 const resetGame = () => {
-selectedNameInfo = namesWithHints[Math.floor(Math.random() *namesWithHints.length)];    //gets random word again upon reset
+selectedNameInfo = namesWithHints[Math.floor(Math.random() *namesWithHints.length)];    //gets random name again upon reset
 selectedName = selectedNameInfo.name;
 nameHint = selectedNameInfo.hint;
 remainingGuesses = 6;
@@ -111,7 +112,9 @@ alert('Hint:' + nameHint);// display hint only ..pauses game until OK button is 
 
 
 }
-resetGame();    //initiation of game
+  //initialization of Game
+  
+  resetGame();
 
 
 

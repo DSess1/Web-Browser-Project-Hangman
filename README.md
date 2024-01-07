@@ -21,3 +21,4 @@ Date(2022) Availability: (https://youtu.be/T6uht1A0114)* **
 
 
 
+**/Title: Building a hangman Game in HTML CSS and JavaScript *Author: (CodingNepal)* Date(2023) Availability: (https://youtu.be/hSSdc8vKP1I)* **
