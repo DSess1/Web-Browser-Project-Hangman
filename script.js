@@ -103,7 +103,7 @@ const checkGameStatus = () => {
 const endGame = (message) => {
    setTimeout( () => window.alert(message), 500);  // displays alert message in browser with 'OK' button.. pauses game until clicked..
                                                    // added setTimeout to delay alert message from poppin up before nomber of livew
-                                                   // reached 0. (code gfro chatGPT.)
+                                                   // reached 0. (code from chatGPT.)
   
 }
 
