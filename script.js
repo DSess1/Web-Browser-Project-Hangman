@@ -13,7 +13,11 @@ const namesWithHints = [
   {name:'JUDD', hint:  '  Current NY Yankees homerun hitter'},
   {name:'MAHOMES', hint:'  Currnet NFL QB of KC Chiefs'},
   {name:'LAMB' , hint: '  Currnet Wide Receiver of the Cowboys'},
-  {name:'JORDAN', hint:'   Often called the Geatest NBA player of All Time'}];
+  {name:'JORDAN', hint:'   Often called the Geatest NBA player of All Time'},
+  {name:'BURROW', hint:'   NFL Quarterback of Cincinatti Bengals'},
+  {name:'HILL', hint:'     NFLs fastest Wide receiver, plays for Miami Dolphins'},
+  {name:'BONDS', hint:'    MLB all time homerun leader '},
+  {name:'PARSONS', hint:'   NFL, Linebacker of Cowboys'}];
                  
  
  let selectedNameInfo = namesWithHints[Math.floor(Math.random() * namesWithHints.length)];// returns random name in nameWithHints array
@@ -23,6 +27,10 @@ const namesWithHints = [
  let nameDisplay = document.getElementById('nameDisplay');
  let guessesLeft =document.getElementById('guessesLeft');
  let letterButtons = document.getElementById('letterButtons');
+
+ 
+
+
 
 //function  displays letters of the Athletes'name, or an Underscore
 
@@ -76,7 +84,7 @@ const checkLetter = (letter)  => {
 
  const displayGuessesLeft = () => {
   guessesLeft.textContent = remainingGuesses;//updates guessesLeft  into remainingGuesses(lives left)
-  //console.log(remainingGuesses);
+  console.log(remainingGuesses);
 }
 
 
@@ -93,7 +101,9 @@ const checkGameStatus = () => {
 // function for end of game 
 
 const endGame = (message) => {
-   alert(message);  // displays alert message in browser with 'OK' button.. pauses game until clicked
+   setTimeout( () => window.alert(message), 500);  // displays alert message in browser with 'OK' button.. pauses game until clicked..
+                                                   // added setTimeout to delay alert message from poppin up before nomber of livew
+                                                   // reached 0. (code gfro chatGPT.)
   
 }
 
@@ -109,12 +119,12 @@ displayName();                                        //shows all underscores  u
 displayGuessesLeft();                                
 displayGuessedLetters();                              // displays all Capital letters upon reset
 alert('Hint:' + nameHint);// display hint only ..pauses game until OK button is clicked
-
+playBackgroundMusic();
 
 }
   //initialization of Game
-  
   resetGame();
+  
 
 
 
