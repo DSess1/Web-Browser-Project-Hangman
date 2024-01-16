@@ -9,6 +9,11 @@ When number of chances are gone, the player loses.
 If player gusses the athlete, player wins.
 Player can choose to play again(a new game) if he/she wins or loses.
 
+The Game is also RESPONSIVE
+
+
+
+
 
 Citing Code Snippets:
 **/Title: Building Hangman game using javascript *Author:(Codepiep)* Date(2021) Availability: (https://youtu.be/UsSBmCmiKmI)* **/
