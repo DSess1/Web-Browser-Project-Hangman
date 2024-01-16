@@ -114,6 +114,9 @@ button:disabled{
          height:85vh;
         
      }
+     h1{
+        font-size: .5em;
+     }
 
      /*  Box where Athletes Name is stored   */  
      .name-display{
