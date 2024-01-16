@@ -119,7 +119,6 @@ displayName();                                        //shows all underscores  u
 displayGuessesLeft();                                
 displayGuessedLetters();                              // displays all Capital letters upon reset
 alert('Hint:' + nameHint);// display hint only ..pauses game until OK button is clicked
-playBackgroundMusic();
 
 }
   //initialization of Game

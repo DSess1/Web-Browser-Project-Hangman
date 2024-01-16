@@ -64,6 +64,13 @@ body{
          
     
 }
+
+.letterbuttons{
+    display: flex;
+
+
+
+}
 /*styling number of guesses(lives) left */
 .guesses-left{
     padding-top: 35px ;
@@ -80,7 +87,7 @@ button{
     border:solid black;
     padding: 10px  20px;
     cursor: pointer;
-    color: rgb(69, 215, 139);
+    color: rgb(76, 195, 134);
     text-align: center;
     
     
@@ -93,6 +100,71 @@ button:disabled{
     
    
   }  
+
+
+  /*************** RESPONSIVE DISPLAY *******************************/
+  /******************************************************************/
+
+@media (max-width: 782px){
+     .container {
+         flex-direction:column;
+         padding:30px 15px;
+         align-items: center;
+         width:250px;
+         height:80vh;
+        
+     }
+
+     /*  Box where Athletes Name is stored   */  
+     .name-display{
+        width: 200px;
+        height:250px;
+        padding:0px;
+        margin:5px;
+     }
+
+
+
+     #letterbuttons .guesses-left{
+        width: 5vw;
+
+     }
+
+     /*  ABC letters */
+     .letters{
+        height:55vh ;
+    
+     }
+    /*  'Number of guesses left and Try toguess Athlete' text */
+     .guesses-left, h2{
+        width: 200px;
+        font-size: 15px; 
+
+     }
+    /* buttons and letters inside buttons */
+    #letterbuttons, button  {
+        width:10vw;
+        height:3vh;
+        font-size:10px ;
+        padding:5px ;
+        margin: 5px; 
+        
+    } 
+    
+    /* letters and underscores inside name-display */
+     span {
+    margin: 2px; 
+
+}
+
+   
+    }
+        
+        
+
+        
+
+    
 
 
 
